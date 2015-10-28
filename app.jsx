@@ -118,7 +118,7 @@ var App = React.createClass({
             //console.log(medieSettimanali);
             this.setState({
                 data: medieSettimanali, 
-                periodo: "Da " + moment(settimanaIniziale, "YYYYMMDD").format("LLL") + " a " + moment(settimanaFinale, "YYYYMMDD").format("LLL"),
+                periodo: "Dal " + moment(settimanaIniziale, "YYYYMMDD").format("LL") + " al " + moment(settimanaFinale, "YYYYMMDD").format("LL"),
                 settimaneValRif: this.refs.settimaneValRif ? this.refs.settimaneValRif .value: 0,
                 isValRifVisible: this.refs.isValRifVisible.checked
             });
