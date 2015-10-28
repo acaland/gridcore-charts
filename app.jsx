@@ -77,6 +77,7 @@ var App = React.createClass({
     
     retrieveData: function(e) {
         e.preventDefault();
+        var userId = this.refs.userId.value;
         var settimanaFinale = this.refs.settimanaFinale.value;
         //alert(settimanaFinale);
         var numeroSettimane = this.refs.numeroSettimane.value;
@@ -184,7 +185,17 @@ var App = React.createClass({
             
             <div style={{marginBottom: 30, marginLeft: 80}}>
                 <form>
-                <div className="form-group" style={{width: "50%"}}>
+                    <div className="form-group" style={{width: "30%"}}>
+                        <label htmlFor="userId">User ID</label>
+                        <input type="text"
+                            className="form-control"
+                            id="userId"
+                            ref="userId"
+                            style={{marginRight: 20}}
+                            placeholder="tabcog_user" />
+                    </div>
+                
+                    <div className="form-group" style={{width: "50%"}}>
                         <label htmlFor="settimanaFinale">Settimana finale</label>
                         <input type="date" 
                             className="form-control" 
@@ -192,7 +203,7 @@ var App = React.createClass({
                             ref="settimanaFinale" 
                             style={{marginRight: 20}} 
                             defaultValue={moment().format("YYYY-MM-DD")} />
-                     </div>
+                    </div>
                      
                     <div className="form-group" style={{width: "50%"}}>
                         <label htmlFor="numeroSettimane">Numero di settimane</label>
